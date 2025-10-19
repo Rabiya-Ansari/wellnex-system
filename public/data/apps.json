@@ -1,0 +1,30 @@
+[
+    {
+        "name": "SoulWhispers",
+        "tagline": "Your Pocket-Sized Wellness Companion",
+        "description": "A mindfulness and emotional wellness app designed to help users reconnect with their inner calm. Through guided meditations, reflective journaling, and AI-powered mood tracking, SoulWhispers nurtures mental clarity and emotional resilience.",
+        "icon": "Brain",
+        "gradient": "from-purple-500 to-pink-500",
+        "features": [
+            "Telehealth and diagnostics",
+            "Mood journaling with AI insights",
+            "Personalized providers",
+            "Seamless booking & check-in"
+        ],
+        "buttonText": "Download SoulWhispers"
+    },
+    {
+        "name": "GymKey",
+        "tagline": "Smart Access to Fitness, Anytime",
+        "description": "Your digital passport to fitness freedom. Whether you're a gym owner or a fitness enthusiast, GymKey connects users with partner gyms, tracks workouts, and simplifies access—all from a single app.",
+        "icon": "Dumbbell",
+        "gradient": "from-blue-500 to-purple-500",
+        "features": [
+            "Seamless check-in at partner gyms",
+            "Workout tracking and analytics",
+            "Membership management",
+            "Real-time class schedules"
+        ],
+        "buttonText": "Explore GymKey"
+    }
+]
