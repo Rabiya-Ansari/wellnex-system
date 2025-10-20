@@ -1,0 +1,71 @@
+{
+    "header": {
+        "badge": "About Wellnex",
+        "title": {
+            "line1": "Redefining",
+            "line2": "Wellness"
+        },
+        "subtitle": "Where cutting-edge technology meets personalized care to transform how you live, move, and thrive"
+    },
+    "stats": [
+        {
+            "value": "50K+",
+            "label": "Active Users"
+        },
+        {
+            "value": "1M+",
+            "label": "Workouts Logged"
+        },
+        {
+            "value": "98%",
+            "label": "Satisfaction Rate"
+        },
+        {
+            "value": "24/7",
+            "label": "Support Available"
+        }
+    ],
+    "mission": {
+        "title": "Our Vision",
+        "paragraphs": [
+            "Wellness isn't just about fitness anymore — it's about creating meaningful connections, personalized experiences, and accessible solutions for everyone.",
+            "Wellnex Systems bridges the gap between advanced AI technology and genuine human needs, empowering individuals to stay active, motivated, and connected — no matter where life takes them."
+        ],
+        "quote": "We believe wellness should be as unique as you are — adaptive, intelligent, and always within reach."
+    },
+    "features": [
+        {
+            "iconName": "Zap",
+            "title": "AI-Powered Insights",
+            "desc": "Personalized recommendations that adapt to your unique wellness journey",
+            "color": "from-amber-400 to-orange-500",
+            "accent": "bg-amber-500/10 border-amber-500/20"
+        },
+        {
+            "iconName": "Users",
+            "title": "Connected Community",
+            "desc": "Join thousands of wellness enthusiasts and expert trainers worldwide",
+            "color": "from-cyan-400 to-blue-500",
+            "accent": "bg-cyan-500/10 border-cyan-500/20"
+        },
+        {
+            "iconName": "Layers",
+            "title": "Unified Experience",
+            "desc": "Fitness, nutrition, mindfulness & recovery in one seamless platform",
+            "color": "from-violet-400 to-purple-500",
+            "accent": "bg-violet-500/10 border-violet-500/20"
+        },
+        {
+            "iconName": "Globe",
+            "title": "Anywhere, Anytime",
+            "desc": "Your wellness companion syncs perfectly across all your devices",
+            "color": "from-emerald-400 to-teal-500",
+            "accent": "bg-emerald-500/10 border-emerald-500/20"
+        }
+    ],
+    "cta": {
+        "label": "Ready to Transform?",
+        "title": "Join the Wellnex Revolution",
+        "buttonText": "Get Started"
+    }
+}

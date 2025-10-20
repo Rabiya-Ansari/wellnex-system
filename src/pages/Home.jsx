@@ -1,10 +1,9 @@
 import React from 'react'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
-import AboutWellnex from '../components/About'
-import FlagshipApps from '../components/FlagshipApps'
 import Wellnes from '../components/Wellnes'
 import Testimonials from '../components/Testimonials'
+import About from './About'
 
 
 function Home() {
@@ -13,8 +12,7 @@ function Home() {
         <div>
             <Header/>
             <Hero/>
-            <AboutWellnex/>
-            <FlagshipApps/>
+            <About/>
             <Wellnes/>
             <Testimonials/>
         </div>
