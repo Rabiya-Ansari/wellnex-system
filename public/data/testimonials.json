@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Ayesha R.",
+    "role": "User",
+    "company": "SoulWhispers",
+    "text": "SoulWhispers helped me find calm in chaos. It’s like therapy in my pocket.",
+    "image": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=400&fit=crop",
+    "logo": "🕊️"
+  },
+  {
+    "id": 2,
+    "name": "Imran M.",
+    "role": "Gym Owner, Lahore",
+    "company": "GymKey",
+    "text": "GymKey has transformed how I manage my gym. My members love the convenience.",
+    "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=400&h=400&fit=crop",
+    "logo": "💪"
+  },
+  {
+    "id": 3,
+    "name": "Imran M.",
+    "role": "Gym Owner, Lahore",
+    "company": "GymKey",
+    "text": "GymKey has transformed how I manage my gym. My members love the convenience.",
+    "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=400&h=400&fit=crop",
+    "logo": "💪"
+  },
+  {
+    "id": 4,
+    "name": "Imran M.",
+    "role": "Gym Owner, Lahore",
+    "company": "GymKey",
+    "text": "GymKey has transformed how I manage my gym. My members love the convenience.",
+    "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=400&h=400&fit=crop",
+    "logo": "💪"
+  },
+  {
+    "id": 5,
+    "name": "Imran M.",
+    "role": "Gym Owner, Lahore",
+    "company": "GymKey",
+    "text": "GymKey has transformed how I manage my gym. My members love the convenience.",
+    "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=400&h=400&fit=crop",
+    "logo": "💪"
+  },
+  {
+    "id": 6,
+    "name": "Imran M.",
+    "role": "Gym Owner, Lahore",
+    "company": "GymKey",
+    "text": "GymKey has transformed how I manage my gym. My members love the convenience.",
+    "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=400&h=400&fit=crop",
+    "logo": "💪"
+  }
+]

@@ -48,10 +48,10 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.3 }}
         >
-          <button className="px-6 py-3 bg-[#00B894] text-white font-semibold rounded-full shadow-lg hover:bg-[#029e7a] transition-transform hover:scale-105">
+          <button className="px-6 py-3 bg-[#00B894] text-white font-semibold rounded-full shadow-lg hover:bg-gradient-to-r hover:from-[var(--cGreen)] hover:to-[var(--yellow)] transition-transform hover:scale-105">
             Join the Movement
           </button>
-          <button className="flex items-center gap-2 px-6 py-3 border-2 border-[#00B894] text-[#00B894] font-semibold rounded-full hover:bg-[#00B894] hover:text-white transition-all">
+          <button className="flex items-center gap-2 px-6 py-3 border-2 border-[#00B894] text-[#00B894] font-semibold rounded-full hover:bg-gradient-to-r hover:from-[var(--cGreen)] hover:to-[var(--yellow)] hover:text-white transition-all">
             <PlayCircle size={22} /> Explore Our Apps
           </button>
         </motion.div>

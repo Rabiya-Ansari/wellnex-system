@@ -38,15 +38,22 @@ function AboutWellnex() {
       >
         {/* Left content */}
         <div className="space-y-6">
-          <motion.h1
-            variants={itemVariants}
-            className=" font text-4xl md:text-4xl  font-extrabold leading-tight text-gray-900"
+          <motion.h2
+            variants={{
+              hidden: { opacity: 0, y: -30 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="font text-4xl md:text-5xl font-extrabold text-center mb-20 leading-tight text-gray-900"
           >
             About{" "}
             <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#00B894] to-[#FFB800]">
-              Wellnex
+              Wellnes
             </span>
-          </motion.h1>
+          </motion.h2>
 
           <motion.h2
             variants={itemVariants}

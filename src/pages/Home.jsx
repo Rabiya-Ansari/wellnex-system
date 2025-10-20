@@ -3,6 +3,9 @@ import Header from '../components/Header'
 import Hero from '../components/Hero'
 import AboutWellnex from '../components/About'
 import FlagshipApps from '../components/FlagshipApps'
+import Wellnes from '../components/Wellnes'
+import Testimonials from '../components/Testimonials'
+
 
 function Home() {
   return (
@@ -12,6 +15,8 @@ function Home() {
             <Hero/>
             <AboutWellnex/>
             <FlagshipApps/>
+            <Wellnes/>
+            <Testimonials/>
         </div>
     </>
   )
