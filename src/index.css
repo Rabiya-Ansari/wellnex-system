@@ -1,22 +1,32 @@
 @import "tailwindcss";
-:root{
-    --color1:#F7FFF7;
-    --color2:#E9F9EF;
-    --color3:#E3F2FD;
-    --color4:#0c0516;
-    --cGreen:#00B894;
-    --yellow:#FFB800;
-    
-    
+
+:root {
+  --color1: #F7FFF7;
+  --color2: #E9F9EF;
+  --color3: #E3F2FD;
+  --color4: #0c0516;
+  --Green: #5D866C;
+  --yellow: #FFB800;
+  --bg-dark: rgba(0, 0, 0, 0.5);
+  --bg: #000000;
+  --border: rgba(255, 255, 255, 0.2);
+  --white: #ffffff;
+  --text: #f3f4f6;
+  --text-muted: #9ca3af;
+  --red: #dc2626;
+  --red-dark: #b91c1c;
+  --orange: #ea580c;
+  --gradient-primary: linear-gradient(to right, var(--color-red), var(--color-orange));
 }
+
 
 
 /* *{
     background:linear-gradient(var(--color1),var(--color2),var(--color3));
 } */
 
-.font{
-   /* font-family: 'Nativera';
+.font {
+  /* font-family: 'Nativera';
   src: url('/fonts/Nativera.ttf') format('truetype'); */
 
   /* font-family: 'GC Epicpro';

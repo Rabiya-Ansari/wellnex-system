@@ -1,107 +1,122 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { PlayCircle } from "lucide-react";
 
+const words = [
+  "Empower Your Wellness",
+  "Train Smarter Every Day",
+  "Merge Mind & Fitness",
+  "Reimagine Your Strength",
+];
+
 const Hero = () => {
+  const [index, setIndex] = useState(0);
+  const [subIndex, setSubIndex] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+  const [text, setText] = useState("");
+
+  useEffect(() => {
+    if (index === words.length) return;
+
+    const currentWord = words[index];
+    let timeout;
+
+    if (!deleting && subIndex <= currentWord.length) {
+
+      timeout = setTimeout(() => {
+        setText(currentWord.substring(0, subIndex));
+        setSubIndex(subIndex + 1);
+      }, 120);
+    } else if (deleting && subIndex >= 0) {
+
+      timeout = setTimeout(() => {
+        setText(currentWord.substring(0, subIndex));
+        setSubIndex(subIndex - 1);
+      }, 60);
+    } else if (subIndex === currentWord.length + 1) {
+
+      timeout = setTimeout(() => setDeleting(true), 1000);
+    } else if (subIndex < 0) {
+
+      setDeleting(false);
+      setIndex((prev) => (prev + 1) % words.length);
+      setSubIndex(0);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [subIndex, deleting, index]);
+
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[var(--color1)] via-[var(--color2)] to-[var(--color3)] flex flex-col md:flex-row items-center justify-between min-h-screen px-8 md:px-20 py-20">
-      
-     
+    <div className="relative min-h-screen flex items-center justify-center bg-[var(--bg-dark)] text-white overflow-hidden px-6 pt-24 md:pt-0">
+
+      <div className="absolute inset-0 overflow-hidden">
+        <video
+          className="w-full h-full object-cover opacity-70"
+          src="./media/hero-video.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        ></video>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90"></div>
+      </div>
+
+   
       <motion.div
-        className="absolute top-0 left-0 w-64 h-64 bg-[var(--yellow)]/30 rounded-full blur-3xl"
-        animate={{ x: [0, 20, -20, 0], y: [0, 20, -10, 0] }}
+        className="absolute top-10 left-10 w-64 h-64 bg-[var(--bg-dark)] rounded-full blur-3xl"
+        animate={{ x: [0, 40, -20, 0], y: [0, 20, -10, 0] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-      ></motion.div>
+      />
       <motion.div
-        className="absolute bottom-0 right-0 w-80 h-80 bg-[var(--cGreen)]/20 rounded-full blur-3xl"
-        animate={{ x: [0, -20, 10, 0], y: [0, -10, 20, 0] }}
+        className="absolute bottom-10 right-10 w-96 h-96 bg-[var(--bg-dark)] rounded-full blur-3xl"
+        animate={{ x: [0, -30, 15, 0], y: [0, -20, 30, 0] }}
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-      ></motion.div>
+      />
 
-     
-      <div className="w-full md:w-1/2 space-y-6 relative z-10">
-        <motion.h1
-          className="font text-4xl md:text-6xl font-Nativera font-extrabold leading-tight text-gray-900"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          Reimagine Your{" "}
-          <span className=" text-transparent bg-clip-text bg-gradient-to-r from-[var(--cGreen)] to-[var(--yellow)]">
-            Wellness Journey
-          </span>
-        </motion.h1>
+    
+      <div className="relative z-20 max-w-7xl w-full grid md:grid-cols-2 items-center gap-10">
 
-        <motion.p
-          className="text-gray-600 text-lg md:text-xl max-w-md"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2 }}
-        >
-          Empower your mind, body, and lifestyle with intelligent wellness technology
-          that adapts to you — not the other way around.
-        </motion.p>
+        <div className="text-left">
+          <h1 className="font text-5xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-[var(--text)] via-[var(--orange)] to-[var(--red)] bg-clip-text text-transparent">
+            Wellnex Systems
+          </h1>
 
-        <motion.div
-          className="flex gap-4 mt-8"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.3 }}
-        >
-          <button className="px-6 py-3 bg-[#00B894] text-white font-semibold rounded-full shadow-lg hover:bg-gradient-to-r hover:from-[var(--cGreen)] hover:to-[var(--yellow)] transition-transform hover:scale-105">
-            Join the Movement
-          </button>
-          <button className="flex items-center gap-2 px-6 py-3 border-2 border-[#00B894] text-[#00B894] font-semibold rounded-full hover:bg-gradient-to-r hover:from-[var(--cGreen)] hover:to-[var(--yellow)] hover:text-white transition-all">
-            <PlayCircle size={22} /> Explore Our Apps
-          </button>
-        </motion.div>
+          <h2 className="text-2xl md:text-3xl font-semibold text-[var(--red)] mb-6 min-h-[2.5rem]">
+            {text}
+            <span className="border-r-2 border-[var(--red)] animate-pulse ml-1"></span>
+          </h2>
+
+          <p className="text-gray-300 text-lg max-w-xl mb-8">
+            A unified digital ecosystem empowering individuals, gyms, and
+            wellness providers through cutting-edge HealthTech and fitness
+            innovation. Our mission: to merge wellness with what’s next.
+          </p>
+
+          <div className="flex flex-wrap gap-4">
+            <button className="bg-gradient-to-r from-[var(--red)] to-[var(--orange)] hover:opacity-90 text-[var(--text)] font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105">
+              Join the Movement
+            </button>
+            <button className="flex items-center gap-2 border border-[var(--border)] text-[var(--red)] px-6 py-3 rounded-full hover:bg-gradient-to-r from-red-600 to-orange-500 hover:text-white transition-all">
+              <PlayCircle size={22} /> Explore Our Apps
+            </button>
+          </div>
+
+          <div className="mt-6">
+            <span className="bg-[var(--red-dark)] text-[var(--text)] px-4 py-2 rounded-full text-sm font-semibold">
+              Trusted by 10K+ Active Users
+            </span>
+          </div>
+        </div>
+
+        <div className="relative flex items-center justify-center min-h-[300px] md:min-h-[400px]">
+          <motion.i
+            className="ri-heart-pulse-fill text-[var(--red)] text-6xl md:text-7xl z-30"
+            animate={{ scale: [1, 1.2, 1], opacity: [1, 0.8, 1] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          ></motion.i>
+        </div>
       </div>
-
-      <div className="w-full md:w-1/2 flex justify-center relative mt-16 md:mt-0">
-        <motion.div
-          className="relative"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-        >
-
-          <motion.img
-            src="./media/hero.jpg"
-            alt="Human Wellness"
-            className="w-[400px] md:w-[450px] "
-            animate={{ y: [0, -15, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          />
-
-
-          <motion.div
-            className="absolute -top-8 -left-8 bg-gradient-to-r from-[var(--cGreen)] to-[var(--yellow)] backdrop-blur-lg p-3 px-5 rounded-2xl shadow-lg text-gray-700 font-medium"
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 4, repeat: Infinity }}
-          >
-           <i class="ri-brain-2-line"></i> Mind Balance
-          </motion.div>
-
-          <motion.div
-            className="absolute top-20 -right-10 bg-gradient-to-r from-[var(--cGreen)] to-[var(--yellow)] backdrop-blur-lg p-3 px-5 rounded-2xl shadow-lg text-gray-700 font-medium"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 5, repeat: Infinity }}
-          >
-            <i class="ri-service-line"></i> Health Sync
-          </motion.div>
-
-          <motion.div
-            className="absolute bottom-8 left-0 bg-gradient-to-r from-[var(--cGreen)] to-[var(--yellow)] backdrop-blur-lg p-3 px-5 rounded-2xl shadow-lg text-gray-700 font-medium"
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 4.5, repeat: Infinity }}
-          >
-            <i class="ri-global-line"></i> Smart Fitness
-          </motion.div>
-        </motion.div>
-      </div>
-
-      
-    </section>
+    </div>
   );
 };
 

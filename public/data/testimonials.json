@@ -11,7 +11,7 @@
   {
     "id": 2,
     "name": "Imran M.",
-    "role": "Gym Owner, Lahore",
+    "role": "Gym Owner, Lahor",
     "company": "GymKey",
     "text": "GymKey has transformed how I manage my gym. My members love the convenience.",
     "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=400&h=400&fit=crop",
@@ -19,38 +19,38 @@
   },
   {
     "id": 3,
-    "name": "Imran M.",
-    "role": "Gym Owner, Lahore",
-    "company": "GymKey",
+    "name": "Sara .",
+    "role": "User",
+    "company": "SoulWhispers",
     "text": "GymKey has transformed how I manage my gym. My members love the convenience.",
-    "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=400&h=400&fit=crop",
+    "image": "https://learninggeniusacademy.com/wp-content/uploads/2013/06/team1.png",
     "logo": "💪"
   },
   {
     "id": 4,
-    "name": "Imran M.",
-    "role": "Gym Owner, Lahore",
-    "company": "GymKey",
+    "name": "Saim.",
+    "role": "User",
+    "company": "SoulWhispers",
     "text": "GymKey has transformed how I manage my gym. My members love the convenience.",
-    "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=400&h=400&fit=crop",
+    "image": "https://manshedauctions.com.au/wp-content/uploads/2023/12/testimonial-1.png",
     "logo": "💪"
   },
   {
     "id": 5,
-    "name": "Imran M.",
-    "role": "Gym Owner, Lahore",
+    "name": "Sameer.",
+    "role": "User",
     "company": "GymKey",
     "text": "GymKey has transformed how I manage my gym. My members love the convenience.",
-    "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=400&h=400&fit=crop",
+    "image": "https://accentsinpine.com/wp-content/uploads/2023/04/Jeff-Olson.jpg",
     "logo": "💪"
   },
   {
     "id": 6,
-    "name": "Imran M.",
-    "role": "Gym Owner, Lahore",
-    "company": "GymKey",
+    "name": "Huzaifa.",
+    "role": "User",
+    "company": "SoulWhispers",
     "text": "GymKey has transformed how I manage my gym. My members love the convenience.",
-    "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=400&h=400&fit=crop",
+    "image": "https://img.freepik.com/free-photo/pleased-handsome-male-customer-show-thumb-up-approval_176420-17945.jpg?semt=ais_hybrid&w=740&q=80",
     "logo": "💪"
   }
 ]
