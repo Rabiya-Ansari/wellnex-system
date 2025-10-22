@@ -6,7 +6,7 @@ function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [scrollWidth, setScrollWidth] = useState(0);
 
-  // ✅ Scroll detection + progress calculation
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -21,13 +21,13 @@ function Header() {
 
   return (
     <>
-      {/* --- Scroll Progress Bar (separate from navbar) --- */}
+ 
       <div
         className="fixed top-0 left-0 h-1.5 z-[60] bg-gradient-to-r from-[var(--red-dark)] via-[var(--red)] to-[var(--orange)] shadow-lg transition-all duration-200"
         style={{ width: `${scrollWidth}%` }}
       ></div>
 
-      {/* --- Navbar --- */}
+
       <header
         className={`fixed top-6 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 ${isScrolled
             ? "bg-black/50 backdrop-blur-lg border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.5)] rounded-full scale-100"
@@ -39,7 +39,6 @@ function Header() {
         }}
       >
         <div className="flex items-center justify-between px-6 py-3 md:px-8 relative">
-          {/* --- Logo Section --- */}
           <div className="flex items-center gap-2">
             <div className="flex items-center justify-center w-9 h-9 bg-gradient-to-r from-red-600 to-orange-500 rounded-full shadow-md">
               <i className="ri-fire-fill text-white text-xl"></i>
@@ -49,7 +48,6 @@ function Header() {
             </span>
           </div>
 
-          {/* --- Desktop Navigation --- */}
           <nav className="hidden md:flex items-center gap-10 font-medium">
             {["/", "/about", "/app", "/contact"].map((path, i) => {
               const names = ["Home", "About", "App", "Contact"];
@@ -71,14 +69,14 @@ function Header() {
             })}
           </nav>
 
-          {/* --- CTA Button --- */}
+         
           <div className="hidden md:block">
             <button className="bg-gradient-to-r from-red-600 to-orange-500 hover:opacity-90 text-white font-semibold px-5 py-2 rounded-full uppercase text-sm transition-all shadow-lg">
               Join Now
             </button>
           </div>
 
-          {/* --- Mobile Menu Toggle --- */}
+          
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="relative text-white text-2xl md:hidden focus:outline-none w-8 h-8 flex items-center justify-center"
@@ -95,7 +93,7 @@ function Header() {
           </button>
         </div>
 
-        {/* --- Mobile Navigation --- */}
+      
         {menuOpen && (
           <div className="md:hidden bg-black/90 text-center rounded-b-3xl backdrop-blur-md py-5 border-t border-white/10 shadow-lg">
             <ul className="space-y-5 text-sm font-semibold uppercase">
