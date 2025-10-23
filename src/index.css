@@ -39,3 +39,7 @@
   src: url('/fonts/Tallica.ttf') format('truetype');
 
 }
+
+body {
+  cursor: url('/media/cursor.png'), auto;
+}
