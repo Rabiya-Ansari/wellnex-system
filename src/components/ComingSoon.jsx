@@ -29,7 +29,7 @@ function ComingSoon() {
 
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">
+            <span className="font text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">
               Next in Wellness
             </span>
           </h2>
