@@ -75,7 +75,7 @@ const Contact = () => {
           <textarea
             placeholder="Your Message"
             rows="4"
-            className="w-full px-4 py-3 rounded-lg border border-[var(--border)] bg-transparent text-[var(--text)] placeholder-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--orange)]"
+            className="w-full px-4 py-3 rounded-lg border border-[var(--border)] bg-transparent text-[var(--text)] placeholder-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--orange)] resize-none"
           ></textarea>
         </div>
 
