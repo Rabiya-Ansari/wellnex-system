@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 @import "tailwindcss";
+
 
 :root {
   --color1: #F7FFF7;
@@ -20,26 +22,34 @@
 }
 
 
-
-/* *{
-    background:linear-gradient(var(--color1),var(--color2),var(--color3));
-} */
-
-.font {
-  /* font-family: 'Nativera';
-  src: url('/fonts/Nativera.ttf') format('truetype'); */
-
-  /* font-family: 'GC Epicpro';
-  src: url('/fonts/GCEpicpro.otf') format('opentype'); */
-
-  /* font-family: 'Grooter';
-  src: url('/fonts/Grooter.ttf') format('truetype'); */
-
-  font-family: 'Tallica';
-  src: url('/fonts/Tallica.ttf') format('truetype');
-
+* {
+ font-family: "Orbitron", sans-serif;
 }
 
 body {
   cursor: url('/media/cursor.png'), auto;
+}
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.7),
+    transparent
+  );
+  animation: shine 1.8s infinite;
 }

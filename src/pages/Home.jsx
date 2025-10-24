@@ -4,7 +4,7 @@ import Hero from '../components/Hero'
 import Wellnes from '../components/Wellnes'
 import Testimonials from '../components/Testimonials'
 import VisionSection from '../components/VisionSection'
-import FlagshipApps from '../components/FlagshipApps'
+import FlagshipApps from './FlagshipApps'
 import ComingSoon from '../components/ComingSoon'
 
 
@@ -16,7 +16,6 @@ function Home() {
             <Hero/>
             <Wellnes/>
             <VisionSection/>
-            <FlagshipApps/>
             <ComingSoon/>
             <Testimonials/>
         </div>
